@@ -1,0 +1,23 @@
+{
+  "info": {
+    "name": "language"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string"
+    },
+    "resume_id": {
+      "model": "resume",
+      "via": "languages"
+    }
+  },
+  "connection": "default",
+  "collectionName": "languages"
+}

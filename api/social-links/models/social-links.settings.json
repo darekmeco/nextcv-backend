@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "social_links",
+  "info": {
+    "name": "Social links"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "uri": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "github",
+        "gitlab"
+      ]
+    },
+    "resume_id": {
+      "model": "resume",
+      "via": "social_links"
+    }
+  }
+}
