@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "resumes",
   "info": {
     "name": "Resume"
   },
@@ -12,8 +14,39 @@
     },
     "lastname": {
       "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "contact_data": {
+      "type": "json"
+    },
+    "my_time": {
+      "type": "json"
+    },
+    "experiences": {
+      "collection": "experience",
+      "via": "resume_id"
+    },
+    "educations": {
+      "collection": "education",
+      "via": "resume_id"
+    },
+    "social_links": {
+      "via": "resume_id",
+      "collection": "social-links"
+    },
+    "portfolios": {
+      "via": "resume_id",
+      "collection": "portfolio"
+    },
+    "skills": {
+      "via": "resume_id",
+      "collection": "skill"
+    },
+    "languages": {
+      "via": "resume_id",
+      "collection": "language"
     }
-  },
-  "connection": "default",
-  "collectionName": "resumes"
+  }
 }

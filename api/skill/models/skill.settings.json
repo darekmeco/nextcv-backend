@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "skills",
+  "info": {
+    "name": "Skill"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "resume_id": {
+      "model": "resume",
+      "via": "skills"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
