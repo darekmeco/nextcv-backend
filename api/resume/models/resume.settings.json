@@ -47,6 +47,10 @@
     "languages": {
       "via": "resume_id",
       "collection": "language"
+    },
+    "passions": {
+      "via": "resume_id",
+      "collection": "passions"
     }
   }
 }

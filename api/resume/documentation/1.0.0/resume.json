@@ -695,6 +695,31 @@
                 }
               }
             }
+          },
+          "passions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "resume_id": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -746,6 +771,12 @@
             }
           },
           "languages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "passions": {
             "type": "array",
             "items": {
               "type": "string"

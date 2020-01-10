@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/languages": {
+    "/passions": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the passions's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve passions document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Language"
+                    "$ref": "#/components/schemas/Passions"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Language"
+          "Passions"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new passions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve passions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Language"
+                  "$ref": "#/components/schemas/Passions"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Language"
+          "Passions"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewLanguage"
+                "$ref": "#/components/schemas/NewPassions"
               }
             }
           }
         }
       }
     },
-    "/languages/count": {
+    "/passions/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of passions documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve passions document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Language"
+          "Passions"
         ],
         "parameters": []
       }
     },
-    "/languages/{id}": {
+    "/passions/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one passions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve passions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Language"
+                  "$ref": "#/components/schemas/Passions"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Language"
+          "Passions"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single passions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve passions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Language"
+                  "$ref": "#/components/schemas/Passions"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Language"
+          "Passions"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewLanguage"
+                "$ref": "#/components/schemas/NewPassions"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single passions record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single passions based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Language"
+          "Passions"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Language": {
+      "Passions": {
         "required": [
           "id"
         ],
@@ -525,7 +525,10 @@
           "name": {
             "type": "string"
           },
-          "level": {
+          "icon": {
+            "type": "string"
+          },
+          "url": {
             "type": "string"
           },
           "resume_id": {
@@ -597,12 +600,15 @@
           }
         }
       },
-      "NewLanguage": {
+      "NewPassions": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "level": {
+          "icon": {
+            "type": "string"
+          },
+          "url": {
             "type": "string"
           },
           "resume_id": {
@@ -614,7 +620,7 @@
   },
   "tags": [
     {
-      "name": "Language"
+      "name": "Passions"
     }
   ]
 }

@@ -595,6 +595,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "passions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
