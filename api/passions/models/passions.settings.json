@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "passions",
+  "info": {
+    "name": "passions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "resume_id": {
+      "model": "resume",
+      "via": "passions"
+    }
+  }
+}
