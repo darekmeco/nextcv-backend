@@ -1,0 +1,32 @@
+{
+  "connection": "default",
+  "collectionName": "educations",
+  "info": {
+    "name": "Education"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "school_name": {
+      "type": "string"
+    },
+    "course": {
+      "type": "string"
+    },
+    "start": {
+      "type": "string"
+    },
+    "end": {
+      "type": "string"
+    },
+    "place": {
+      "type": "string"
+    },
+    "resume_id": {
+      "via": "educations",
+      "model": "resume"
+    }
+  }
+}

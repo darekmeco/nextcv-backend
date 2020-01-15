@@ -1,0 +1,30 @@
+{
+  "info": {
+    "name": "portfolio"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "github",
+        "gitlab"
+      ]
+    },
+    "resume_id": {
+      "model": "resume",
+      "via": "portfolios"
+    }
+  },
+  "connection": "default",
+  "collectionName": "portfolios"
+}
