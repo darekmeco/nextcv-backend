@@ -1,0 +1,26 @@
+{
+  "info": {
+    "name": "User Time"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "percentage": {
+      "type": "integer"
+    },
+    "color": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "resume_id": {
+      "model": "resume",
+      "via": "user_times"
+    }
+  },
+  "connection": "default",
+  "collectionName": "user_times"
+}

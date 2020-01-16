@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/resumes": {
+    "/user-times": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Resume"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Resume"
+          "User-time"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Resume"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Resume"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewResume"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/resumes/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Resume"
+          "User-time"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewUser-time"
+              }
+            }
+          }
+        }
       }
     },
-    "/resumes/{id}": {
+    "/user-times/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Resume"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Resume"
+          "User-time"
+        ],
+        "parameters": []
+      }
+    },
+    "/user-times/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "User-time"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Resume"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Resume"
+          "User-time"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewResume"
+                "$ref": "#/components/schemas/NewUser-time"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Resume"
+          "User-time"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Resume": {
+      "User-time": {
         "required": [
           "id"
         ],
@@ -522,225 +535,83 @@
           "id": {
             "type": "string"
           },
-          "firstname": {
+          "percentage": {
+            "type": "integer"
+          },
+          "color": {
             "type": "string"
           },
-          "lastname": {
+          "label": {
             "type": "string"
           },
-          "position": {
-            "type": "string"
-          },
-          "contact_data": {
-            "type": "object"
-          },
-          "my_time": {
-            "type": "object"
-          },
-          "experiences": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "position": {
-                  "type": "string"
-                },
-                "resume_id": {
-                  "type": "string"
-                },
-                "company_name": {
-                  "type": "string"
-                },
-                "place": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "start": {
-                  "type": "string"
-                },
-                "end": {
+          "resume_id": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
+                "type": "string"
+              },
+              "position": {
+                "type": "string"
+              },
+              "contact_data": {
+                "type": "object"
+              },
+              "my_time": {
+                "type": "object"
+              },
+              "experiences": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "educations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "school_name": {
-                  "type": "string"
-                },
-                "course": {
-                  "type": "string"
-                },
-                "start": {
-                  "type": "string"
-                },
-                "end": {
-                  "type": "string"
-                },
-                "place": {
-                  "type": "string"
-                },
-                "resume_id": {
+              },
+              "educations": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "social_links": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "uri": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "resume_id": {
+              },
+              "social_links": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "portfolios": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "resume_id": {
+              },
+              "portfolios": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "skills": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "resume_id": {
-                  "type": "string"
-                },
-                "url": {
+              },
+              "skills": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "languages": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "level": {
-                  "type": "string"
-                },
-                "resume_id": {
+              },
+              "languages": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "passions": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "resume_id": {
+              },
+              "passions": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "user_times": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "percentage": {
-                  "type": "integer"
-                },
-                "color": {
-                  "type": "string"
-                },
-                "label": {
-                  "type": "string"
-                },
-                "resume_id": {
+              },
+              "user_times": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
               }
@@ -748,78 +619,23 @@
           }
         }
       },
-      "NewResume": {
+      "NewUser-time": {
         "properties": {
-          "firstname": {
+          "percentage": {
+            "type": "integer"
+          },
+          "color": {
             "type": "string"
           },
-          "lastname": {
+          "label": {
             "type": "string"
           },
-          "position": {
+          "resume_id": {
             "type": "string"
-          },
-          "contact_data": {
-            "type": "object"
-          },
-          "my_time": {
-            "type": "object"
-          },
-          "experiences": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "educations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "social_links": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "portfolios": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "skills": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "languages": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "passions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "user_times": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       }
     }
   },
-  "tags": [
-    {
-      "name": "Resume"
-    }
-  ]
+  "tags": []
 }

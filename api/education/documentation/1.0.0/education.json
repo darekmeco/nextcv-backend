@@ -601,6 +601,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "user_times": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }

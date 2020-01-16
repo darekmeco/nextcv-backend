@@ -51,6 +51,10 @@
     "passions": {
       "via": "resume_id",
       "collection": "passions"
+    },
+    "user_times": {
+      "via": "resume_id",
+      "collection": "user-time"
     }
   }
 }
