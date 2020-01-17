@@ -19,8 +19,8 @@
       "type": "string"
     },
     "resume_id": {
-      "model": "resume",
-      "via": "passions"
+      "via": "passions",
+      "model": "resume"
     }
   }
 }

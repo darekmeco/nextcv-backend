@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/16/2020 4:58:57 PM"
+    "x-generation-date": "01/17/2020 5:10:59 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6870,9 +6870,6 @@
               "contact_data": {
                 "type": "object"
               },
-              "my_time": {
-                "type": "object"
-              },
               "experiences": {
                 "type": "array",
                 "items": {
@@ -6976,9 +6973,6 @@
                 "type": "string"
               },
               "contact_data": {
-                "type": "object"
-              },
-              "my_time": {
                 "type": "object"
               },
               "experiences": {
@@ -7107,9 +7101,6 @@
               "contact_data": {
                 "type": "object"
               },
-              "my_time": {
-                "type": "object"
-              },
               "experiences": {
                 "type": "array",
                 "items": {
@@ -7210,9 +7201,6 @@
                 "type": "string"
               },
               "contact_data": {
-                "type": "object"
-              },
-              "my_time": {
                 "type": "object"
               },
               "experiences": {
@@ -7324,9 +7312,6 @@
               "contact_data": {
                 "type": "object"
               },
-              "my_time": {
-                "type": "object"
-              },
               "experiences": {
                 "type": "array",
                 "items": {
@@ -7417,9 +7402,6 @@
             "type": "string"
           },
           "contact_data": {
-            "type": "object"
-          },
-          "my_time": {
             "type": "object"
           },
           "experiences": {
@@ -7647,9 +7629,6 @@
           "contact_data": {
             "type": "object"
           },
-          "my_time": {
-            "type": "object"
-          },
           "experiences": {
             "type": "array",
             "items": {
@@ -7729,9 +7708,6 @@
                 "type": "string"
               },
               "contact_data": {
-                "type": "object"
-              },
-              "my_time": {
                 "type": "object"
               },
               "experiences": {
@@ -7843,9 +7819,6 @@
               "contact_data": {
                 "type": "object"
               },
-              "my_time": {
-                "type": "object"
-              },
               "experiences": {
                 "type": "array",
                 "items": {
@@ -7953,9 +7926,6 @@
                 "type": "string"
               },
               "contact_data": {
-                "type": "object"
-              },
-              "my_time": {
                 "type": "object"
               },
               "experiences": {

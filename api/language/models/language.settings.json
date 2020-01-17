@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "languages",
   "info": {
     "name": "language"
   },
@@ -14,10 +16,8 @@
       "type": "string"
     },
     "resume_id": {
-      "model": "resume",
-      "via": "languages"
+      "via": "languages",
+      "model": "resume"
     }
-  },
-  "connection": "default",
-  "collectionName": "languages"
+  }
 }

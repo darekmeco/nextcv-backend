@@ -548,9 +548,6 @@
               "contact_data": {
                 "type": "object"
               },
-              "my_time": {
-                "type": "object"
-              },
               "experiences": {
                 "type": "array",
                 "items": {

@@ -23,8 +23,8 @@
       ]
     },
     "resume_id": {
-      "model": "resume",
-      "via": "social_links"
+      "via": "social_links",
+      "model": "resume"
     }
   }
 }

@@ -21,9 +21,6 @@
     "contact_data": {
       "type": "json"
     },
-    "my_time": {
-      "type": "json"
-    },
     "experiences": {
       "collection": "experience",
       "via": "resume_id"
@@ -33,28 +30,28 @@
       "via": "resume_id"
     },
     "social_links": {
-      "via": "resume_id",
-      "collection": "social-links"
+      "collection": "social-links",
+      "via": "resume_id"
     },
     "portfolios": {
-      "via": "resume_id",
-      "collection": "portfolio"
+      "collection": "portfolio",
+      "via": "resume_id"
     },
     "skills": {
-      "via": "resume_id",
-      "collection": "skill"
+      "collection": "skill",
+      "via": "resume_id"
     },
     "languages": {
-      "via": "resume_id",
-      "collection": "language"
+      "collection": "language",
+      "via": "resume_id"
     },
     "passions": {
-      "via": "resume_id",
-      "collection": "passions"
+      "collection": "passions",
+      "via": "resume_id"
     },
     "user_times": {
-      "via": "resume_id",
-      "collection": "user-time"
+      "collection": "user-time",
+      "via": "resume_id"
     }
   }
 }
