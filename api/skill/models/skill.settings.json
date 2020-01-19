@@ -13,8 +13,8 @@
       "type": "string"
     },
     "resume_id": {
-      "model": "resume",
-      "via": "skills"
+      "via": "skills",
+      "model": "resume"
     },
     "url": {
       "type": "string"

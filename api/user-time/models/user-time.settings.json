@@ -1,22 +1,25 @@
 {
   "connection": "default",
-  "collectionName": "languages",
+  "collectionName": "user_times",
   "info": {
-    "name": "language"
+    "name": "User Time"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "name": {
+    "percentage": {
+      "type": "integer"
+    },
+    "color": {
       "type": "string"
     },
-    "level": {
+    "label": {
       "type": "string"
     },
     "resume_id": {
-      "via": "languages",
+      "via": "user_times",
       "model": "resume"
     }
   }

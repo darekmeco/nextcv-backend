@@ -1,29 +1,25 @@
 {
   "connection": "default",
-  "collectionName": "social_links",
+  "collectionName": "passions",
   "info": {
-    "name": "Social links"
+    "name": "passions"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "uri": {
+    "name": {
+      "type": "string"
+    },
+    "icon": {
       "type": "string"
     },
     "url": {
       "type": "string"
     },
-    "icon": {
-      "type": "enumeration",
-      "enum": [
-        "github",
-        "gitlab"
-      ]
-    },
     "resume_id": {
-      "via": "social_links",
+      "via": "passions",
       "model": "resume"
     }
   }

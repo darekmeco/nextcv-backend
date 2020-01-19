@@ -545,9 +545,6 @@
               "contact_data": {
                 "type": "object"
               },
-              "my_time": {
-                "type": "object"
-              },
               "experiences": {
                 "type": "array",
                 "items": {
@@ -579,6 +576,18 @@
                 }
               },
               "languages": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "passions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user_times": {
                 "type": "array",
                 "items": {
                   "type": "string"

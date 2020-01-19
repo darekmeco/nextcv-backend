@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "portfolios",
   "info": {
     "name": "portfolio"
   },
@@ -21,10 +23,8 @@
       ]
     },
     "resume_id": {
-      "model": "resume",
-      "via": "portfolios"
+      "via": "portfolios",
+      "model": "resume"
     }
-  },
-  "connection": "default",
-  "collectionName": "portfolios"
+  }
 }
