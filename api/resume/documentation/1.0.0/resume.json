@@ -667,6 +667,9 @@
                 },
                 "url": {
                   "type": "string"
+                },
+                "Current": {
+                  "type": "boolean"
                 }
               }
             }

@@ -26,8 +26,8 @@
       "via": "resume_id"
     },
     "educations": {
-      "collection": "education",
-      "via": "resume_id"
+      "via": "resume_id",
+      "collection": "education"
     },
     "social_links": {
       "collection": "social-links",
@@ -38,8 +38,8 @@
       "via": "resume_id"
     },
     "skills": {
-      "collection": "skill",
-      "via": "resume_id"
+      "via": "resume_id",
+      "collection": "skill"
     },
     "languages": {
       "collection": "language",

@@ -13,11 +13,15 @@
       "type": "string"
     },
     "resume_id": {
-      "via": "skills",
-      "model": "resume"
+      "model": "resume",
+      "via": "skills"
     },
     "url": {
       "type": "string"
+    },
+    "Current": {
+      "type": "boolean",
+      "default": true
     }
   }
 }

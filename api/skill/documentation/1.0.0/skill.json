@@ -597,6 +597,10 @@
           },
           "url": {
             "type": "string"
+          },
+          "Current": {
+            "type": "boolean",
+            "default": true
           }
         }
       },
@@ -610,6 +614,10 @@
           },
           "url": {
             "type": "string"
+          },
+          "Current": {
+            "type": "boolean",
+            "default": true
           }
         }
       }
