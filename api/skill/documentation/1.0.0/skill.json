@@ -598,7 +598,7 @@
           "url": {
             "type": "string"
           },
-          "Current": {
+          "current": {
             "type": "boolean",
             "default": true
           }
@@ -615,7 +615,7 @@
           "url": {
             "type": "string"
           },
-          "Current": {
+          "current": {
             "type": "boolean",
             "default": true
           }
