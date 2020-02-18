@@ -595,6 +595,9 @@
                 },
                 "resume_id": {
                   "type": "string"
+                },
+                "diploma": {
+                  "type": "string"
                 }
               }
             }

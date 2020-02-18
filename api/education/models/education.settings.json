@@ -27,6 +27,12 @@
     "resume_id": {
       "model": "resume",
       "via": "educations"
+    },
+    "diploma": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
     }
   }
 }
